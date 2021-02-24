@@ -3,26 +3,28 @@ angular.module('primeiraApp').component('valueBox', {
         grid: '@',
         colorClass: '@',
         value: '@',
-        text:'@',
+        text: '@',
         iconClass: '@'
     },
     controller: [
         'gridSystem',
-        function(gridSystem){
+        function (gridSystem) {
             this.$onInit = () => this.gridClass = gridSystem.toCssClasses(this.grid)
         },
     ],
     template: `
-    <div class="{{ $ctrl.gridClass }}">
-        <div class="small-box {{ $ctrl.colorClass }}">
-            <div class="inner">
-                <h3> {{ $ctrl.value }}</h3>
-                <p>{{ $ctrl.text }}</p>
-            </div>
-            <div class="icon">
-                <i class="fa {{ $ctrl.iconClass }}"></i>
+        <div class="{{ $ctrl.gridClass }}">
+            <div class="small-box {{ $ctrl.colorClass }}">
+                <div class="inner">
+                    <h3> {{ $ctrl.value }}</h3>
+                    <p>{{ $ctrl.text }}</p>
+                </div>
+                <div class="icon">
+                    <i class="fa {{ $ctrl.iconClass }}"></i>
+                </div>
             </div>
         </div>
-    </div>
-    `
+        `
 })
+
+
