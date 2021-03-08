@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+
 const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb//localhost/mymoney'
 module.exports = mongoose.connect(url, { useNewUrlParser: true , useUnifiedTopology: true })
 
