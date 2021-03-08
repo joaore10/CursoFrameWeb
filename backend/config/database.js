@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-module.exports = mongoose.connect('mongodb://localhost/db_finance', { useNewUrlParser: true , useUnifiedTopology: true })
+const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb//localhost/mymoney'
+module.exports = mongoose.connect(url, { useNewUrlParser: true , useUnifiedTopology: true })
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatorio"
 mongoose.Error.messages.Number.min = "O '{VALUE}' informado é menor que o limite minimo de '{MIN}'"
