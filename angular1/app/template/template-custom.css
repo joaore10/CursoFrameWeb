@@ -15,3 +15,6 @@ html {
 .table-actions {
     width: 140px;
 }
+
+html, .wrapper { background-color: #fff!important; }
+.login-box-body { background-color: #eee;}
