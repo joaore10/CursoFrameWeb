@@ -1,6 +1,4 @@
-html {
-    background-color: #ecf0f5;
-}
+
 
 .main-footer {
     position: fixed;
@@ -16,5 +14,5 @@ html {
     width: 140px;
 }
 
-html, .wrapper { background-color: #fff!important; }
-.login-box-body { background-color: #eee;}
+html, .wrapper { background-color: #ecf0f5!important; }
+.login-box-body { background-color: #fff;}

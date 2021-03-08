@@ -12,15 +12,11 @@ module.exports = function(server){
     openApi.post('/signup', AuthService.signup)
     openApi.post('/validateToken', AuthService.validateToken)
 
-    //Rotas Protegidas
+    //Rotas Protegidas por token
     const protectedApi = express.Router()
     server.use('/api', protectedApi)
 
     protectedApi.use(auth)
-
-    // API de ROTAS
-    const router = express.Router()
-    server.use('/api', router)
 
    //rotas da API
    const billingCyclesService = require('../api/billingCycle/billingCycleService')
