@@ -22,9 +22,9 @@
         }
 
 
-        vm.getUser = () => ({ name: 'Usuário Mock', email: 'mock@cod3r.com.br' })
+        vm.getUser = () => auth.getUser()
 
         vm.logout = () => {
-            console.log('logout...')
+            auth.logout(() => msgs.addSuccess('Sucesso'))
         }
     }
